@@ -63,6 +63,15 @@ public class Hotel {
 		
 	}
 	
+	public boolean comprobarLimpia(int opcion) {
+		if(opcion==1) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	
 	public boolean comprobarOcupado(int opcion) {
 		if(opcion==1) {
 			return true;
@@ -70,24 +79,30 @@ public class Hotel {
 			return false;
 		}
 	}
-	public boolean serviciosExtra(int opcion) {
-		if(opcion==1) {
-			return true;
-		}else {
-			return false;
-		}
+	
+	public Habitacion findById(int numHabitacion) {
+		int i=0;
+		boolean encontrado=false;
+		while(i < listaHabitaciones.length && !encontrado) {
+			Habitacion deLista=listaHabitaciones[1];
+			if(deLista.getNumHabitacion() == numHabitacion) 
+				encontrado=true;
+				else
+					i++;
+			
+		}if(encontrado)
+			return listaHabitaciones[i];
+		else
+			return null;
+	}
+	
+	public double calcularPrecioFinalUnidad(double precioServExtra, int numHabitacion) {
+		return (findById(numHabitacion).getPrecio()+precioServExtra)*findById(numHabitacion).getNumDias();
 		
 	}
 	
-	public double calcularPrecioFinalUnidad(Habitacion h, double precioServExtra) {
-		double precioTHabitacion = 0;
-		
-		return precioTHabitacion+=h.getPrecio()+precioServExtra*h.getNumDias();
-		
-	}
-	
-	public void mostrarFactura(Habitacion h) {
-		h.toString();
+	public void mostrarFactura(int numHabitacion) {
+		findById(numHabitacion).toString();
 		
 	}
 	

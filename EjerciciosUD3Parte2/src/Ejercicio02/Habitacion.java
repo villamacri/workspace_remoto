@@ -14,21 +14,21 @@ public class Habitacion {
 
 	private String tipo;
 	private double precio;
-	private boolean servExtras;//Sustituit por lista
 	private String nombreCliente;
 	private int numDias;
 	private boolean limpia;
+	private boolean ocupada;
 	private int numHabitacion;
 	
-	public Habitacion(String tipo, double precio, boolean servExtras, String nombreCliente, int numDias, boolean limpia,
-			int numHabitacion) {
+	public Habitacion(String tipo, double precio, String nombreCliente, int numDias, boolean limpia,
+			boolean ocupada, int numHabitacion) {
 	
 		this.tipo = tipo;
 		this.precio = precio;
-		this.servExtras = servExtras;
 		this.nombreCliente = nombreCliente;
 		this.numDias = numDias;
 		this.limpia = limpia;
+		this.ocupada = ocupada;
 		this.numHabitacion = numHabitacion;
 		
 	
@@ -51,13 +51,9 @@ public class Habitacion {
 		this.precio = precio;
 	}
 
-	public boolean getServExtras() {
-		return servExtras;
-	}
 
-	public void setServExtras(boolean servExtras) {
-		this.servExtras = servExtras;
-	}
+
+
 
 	public String getNombreCliente() {
 		return nombreCliente;
@@ -82,6 +78,14 @@ public class Habitacion {
 	public void setLimpia(boolean limpia) {
 		this.limpia = limpia;
 	}
+	
+	public boolean isOcupada() {
+		return ocupada;
+	}
+	
+	public void setOcupada(boolean ocupada) {
+		this.ocupada = ocupada;
+	}
 
 	public int getNumHabitacion() {
 		return numHabitacion;
@@ -93,8 +97,8 @@ public class Habitacion {
 
 	@Override
 	public String toString() {
-		return "Habitación [tipo=" + tipo + ", precio=" + precio + ", servExtras=" + servExtras + ", nombreCliente="
-				+ nombreCliente + ", numDias=" + numDias + ", limpia=" + limpia + ", numHabitacion=" + numHabitacion
+		return "Habitación [tipo=" + tipo + ", precio=" + precio + ", nombreCliente="
+				+ nombreCliente + ", numDias=" + numDias + ", limpia=" + limpia + ", ocupada=" + ocupada + ", numHabitacion=" + numHabitacion
 				+ "]";
 	}
 	
