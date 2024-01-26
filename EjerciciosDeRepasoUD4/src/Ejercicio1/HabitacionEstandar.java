@@ -4,15 +4,16 @@ public class HabitacionEstandar {
 	
 	private double precioBase;
 	private boolean ocupada;
-	private String nombreCliente;
+	private String nombreCliente, idHabitacion;
 	private int numDiasOcupado, numOcupantes;
 	
-	public HabitacionEstandar(double precioBase, boolean ocupada, String nombreCliente, int numDiasOcupado,
+	public HabitacionEstandar(double precioBase, boolean ocupada, String nombreCliente, String idHabitacion, int numDiasOcupado,
 			int numOcupantes) {
 		super();
 		this.precioBase = precioBase;
 		this.ocupada = ocupada;
 		this.nombreCliente = nombreCliente;
+		this.idHabitacion = idHabitacion;
 		this.numDiasOcupado = numDiasOcupado;
 		this.numOcupantes = numOcupantes;
 	}
@@ -41,6 +42,14 @@ public class HabitacionEstandar {
 		this.nombreCliente = nombreCliente;
 	}
 
+	public String getIdHabitacion() {
+		return idHabitacion;
+	}
+
+	public void setIdHabitacion(String idHabitacion) {
+		this.idHabitacion = idHabitacion;
+	}
+
 	public int getNumDiasOcupado() {
 		return numDiasOcupado;
 	}
@@ -56,14 +65,15 @@ public class HabitacionEstandar {
 	public void setNumOcupantes(int numOcupantes) {
 		this.numOcupantes = numOcupantes;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "HabitacionEstandar [precioBase=" + precioBase + ", ocupada=" + ocupada + ", nombreCliente="
-				+ nombreCliente + ", numDiasOcupado=" + numDiasOcupado + ", numOcupantes=" + numOcupantes + "]";
+				+ nombreCliente + ", IdHabitacion=" + idHabitacion + ", numDiasOcupado=" + numDiasOcupado
+				+ ", numOcupantes=" + numOcupantes + "]";
 	}
 	
-	public double calcularPrecio () {
+	public double calcularPrecio (double precioServicio, double descuento) {
 		
 		return precioBase*numDiasOcupado;
 	}

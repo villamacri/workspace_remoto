@@ -4,9 +4,9 @@ public class Apartamento extends HabitacionEstandar{
 
 	private boolean contratado;
 
-	public Apartamento(double precioBase, boolean ocupada, String nombreCliente, int numDiasOcupado, int numOcupantes,
+	public Apartamento(double precioBase, boolean ocupada, String nombreCliente, String idHabitacion, int numDiasOcupado, int numOcupantes,
 			boolean contratado) {
-		super(precioBase, ocupada, nombreCliente, numDiasOcupado, numOcupantes);
+		super(precioBase, ocupada, nombreCliente, idHabitacion, numDiasOcupado, numOcupantes);
 		this.contratado = contratado;
 	}
 
@@ -23,9 +23,10 @@ public class Apartamento extends HabitacionEstandar{
 		return "Apartamento [contratado=" + contratado + "]";
 	}
 	
-	public double calcularPrecioApartamento(double precioServicio) {
+	@Override
+	public double calcularPrecio(double precioServicio, double descuento) {
 		
-		double precioFinal=super.calcularPrecio();
+		double precioFinal=super.calcularPrecio(precioServicio, descuento);
 		if(contratado==true) {
 			precioFinal+=precioServicio;
 			

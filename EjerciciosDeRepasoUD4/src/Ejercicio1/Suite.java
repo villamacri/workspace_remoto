@@ -4,9 +4,9 @@ public class Suite extends HabitacionEstandar {
 	
 	private double superficieMetros, servicioHabitaciones;
 
-	public Suite(double precioBase, boolean ocupada, String nombreCliente, int numDiasOcupado, int numOcupantes,
-			double superficieMetros, double servicioHabitaciones) {
-		super(precioBase, ocupada, nombreCliente, numDiasOcupado, numOcupantes);
+	public Suite(double precioBase, boolean ocupada, String nombreCliente, String idHabitacion, int numDiasOcupado,
+			int numOcupantes, double superficieMetros, double servicioHabitaciones) {
+		super(precioBase, ocupada, nombreCliente, idHabitacion, numDiasOcupado, numOcupantes);
 		this.superficieMetros = superficieMetros;
 		this.servicioHabitaciones = servicioHabitaciones;
 	}
@@ -27,16 +27,16 @@ public class Suite extends HabitacionEstandar {
 	public void setServicioHabitaciones(double servicioHabitaciones) {
 		this.servicioHabitaciones = servicioHabitaciones;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "Suite [superficieMetros=" + superficieMetros + ", servicioHabitaciones="
 				+ servicioHabitaciones + "]";
 	}
 	
-	public double calcularPrecioSuite (double descuento) {
+	public double calcularPrecio (double precioServicio, double descuento) {
 		
-		return (super.calcularPrecio()+servicioHabitaciones)-(super.calcularPrecio()*descuento/100);
+		return (super.calcularPrecio(precioServicio, descuento)+servicioHabitaciones)-(super.calcularPrecio(precioServicio, descuento)*descuento/100);
 	}
 
 }
