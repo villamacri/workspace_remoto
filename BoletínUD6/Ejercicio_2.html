@@ -2,9 +2,31 @@
 <html>
 <head>
 <meta charset="UTF-8"/>
-<title>Tabla "Zebra"</title>
+<title>Ejercicio 2</title>
 </head>
 <style>
+   table {
+    width: 40%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    }
+
+    /* Estilo para las celdas de la tabla */
+    th, td {
+    border: 1px solid rgb(7, 99, 7);
+    padding: 8px;
+    text-align: left;
+    }
+
+    /* Estilo para el encabezado de la tabla */
+    th {
+    background-color: rgb(77, 219, 77);
+    color:white;
+    }
+
+    tr:nth-child(odd){
+        background-color: rgb(213, 240, 213);
+    }
 
 </style>
 <body>
@@ -41,7 +63,6 @@
         </tr>
         <tr>
             <td>Königlich Essen</td>
-            4
             <td>Philip Cramer</td>
             <td>Germany</td>
         </tr>
