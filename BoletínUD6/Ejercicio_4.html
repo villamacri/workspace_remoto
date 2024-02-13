@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio_4</title>
+    <style type="text/css">
+         table{
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 10%;
+            
+        }
+        caption{
+            text-align: left;
+            font-size: 16pt;
+            font-weight: bold;
+            text-indent: 15px;
+          
+        }
+        th{
+            text-align: center;
+            background-color: white;
+           
+        }
+        th, td{
+           
+            font-weight: 500;
+            vertical-align: text-bottom;
+            padding: 5px 10px;
+           
+          
+        }
+        tbody>tr:hover{
+            background-color: rgb(103, 167, 226);
+            color: white;
+        }
+        tr:nth-child(odd){
+            background-color: rgb(233, 230, 228);
+            color: black;
+        }
+        tr:nth-child(even){
+            background-color: rgb(255, 255, 255);
+            color: black;
+        }
+        .rojo{
+            background-color: red;
+            
+        }
+        .verde{
+            background-color: green;
+        }
+        .amarillo{
+            background-color: yellow;
+        }
+        .gris{
+            background-color: gray;
+        }
+        .azul{
+            background-color: blue;
+        }
+
+        td:first-of-type{
+            padding: 5px;
+            border-top: 2px white solid;
+            border-bottom: 2px white solid;
+        }
+
+        tbody{
+            border-top: 3px solid red;
+        }
+
+        thead>tr:first-of-type{
+            border-bottom: 3px solid grey;
+        }
+
+        td:nth-of-type(2){
+            text-align: center;
+        }
+        tfoot{
+            border-top: 3px solid rgb(221, 205, 205);
+           
+        }
+        tfoot> td{
+            padding: 5px;
+            width: 5px;
+        }
+       
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Clasificación Primera División</caption>
+        <thead>
+            <tr>
+                <th colspan="6"></th>
+                <th colspan="6">TOTALES</th>
+                <th colspan="6">EN CASA</th>
+                <th colspan="6">FUERA</th>
+            </tr>
+
+            <tr>
+                <th colspan="4">Equipos</th>
+                <th></th>
+                <th>PT</th>
+                <th>PG</th>
+                <th>PE</th>
+                <th>PP</th>
+                <th>GF</th>
+                <th>GC</th>
+                <th></th>
+
+                <th>PT</th>
+                <th>PG</th>
+                <th>PE</th>
+                <th>PP</th>
+                <th>GF</th>
+                <th>GC</th>
+                <th></th>
+
+                <th>PT</th>
+                <th>PG</th>
+                <th>PE</th>
+                <th>PP</th>
+                <th>GF</th>
+                <th>GC</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td class="verde"></td>
+                <td>1</td>
+                <td><img src="equipos/fcb.png" width="25px"></td>
+                <td>Barcelona</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                
+            </tr>
+
+
+            <tr>
+                <td class="verde"></td>
+                <td>2</td>
+                <td><img src="equipos/ath.png" width="25px"></td>
+                <td>Atlético</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+
+            <tr>
+                <td class="verde"></td>
+                <td>3</td>
+                <td><img src="equipos/rma.png" width="25px"></td>
+                <td>Real Madrid</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="verde"></td>
+                <td>4</td>
+                <td><img src="equipos/sfc.png" width="25px"></td>
+                <td>Sevilla</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="amarillo"></td>
+                <td>5</td>
+                <td><img src="equipos/get.png" width="25px"></td>
+                <td>Getafe</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="amarillo"></td>
+                <td>6</td>
+                <td><img src="equipos/ala.png" width="25px"></td>
+                <td>Alavés</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="azul"></td>
+                <td>7</td>
+                <td><img src="equipos/rso.png" width="25px"></td>
+                <td>R. Sociedad</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="gris"></td>
+                <td>8</td>
+                <td><img src="equipos/bet.png" width="25px"></td>
+                <td>Betis</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="gris"></td>
+                <td>9</td>
+                <td><img src="equipos/val.png" width="25px"></td>
+                <td>Valencia</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="gris"></td>
+                <td>10</td>
+                <td><img src="equipos/eib.png" width="25px"></td>
+                <td>Eibar</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="gris"></td>
+                <td>11</td>
+                <td><img src="equipos/lev.png" width="25px"></td>
+                <td>Levante</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="gris"></td>
+                <td>12</td>
+                <td><img src="equipos/leg.png" width="25px"></td>
+                <td>Leganés</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="gris"></td>
+                <td>13</td>
+                <td><img src="equipos/spy.png" width="25px" alt="zaragoza"></td>
+                <td>Espanyol</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="gris"></td>
+                <td>14</td>
+                <td><img src="equipos/ath.png" width="25px"></td>
+                <td>Athletic</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="gris"></td>
+                <td>15</td>
+                <td><img src="equipos/gir.png" width="25px" alt="Elche"></td>
+                <td>Girona</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="gris"></td>
+                <td>16</td>
+                <td><img src="equipos/vll.png" width="25px" alt="Valladolid"></td>
+                <td>Valladolid</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="gris"></td>
+                <td>17</td>
+                <td><img src="equipos/cel.png" width="25px"></td>
+                <td>Celta</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="rojo"></td>
+                <td>18</td>
+                <td><img src="equipos/vil.png" width="25px"></td>
+                <td>Villareal</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="rojo"></td>
+                <td>19</td>
+                <td><img src="equipos/rva.png" width="25px"></td>
+                <td>Rayo</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td class="rojo"></td>
+                <td>20</td>
+                <td><img src="equipos/hsc.png" width="25px"></td>
+                <td>Huesca</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="verde"></td>
+                <td colspan="3">Champions League</td>
+                <td></td>
+                <td></td>
+                <td class="amarillo"></td>
+                <td colspan="4">Europa League</td>
+                <td></td>
+                <td></td>
+                <td class="azul"></td>
+                <td colspan="4">Conference League</td>
+                <td></td>
+                <td></td>
+                <td class="rojo"></td>
+                <td colspan="4">Descenso</td>
+            </tr>
+        </tfoot>
+      
+    </table>
+</body>
+</html>
