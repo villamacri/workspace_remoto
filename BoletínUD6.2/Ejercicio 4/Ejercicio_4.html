@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(230, 222, 222);
+        }
+
+        form {
+            background-color: rgb(7, 248, 196);
+            border: 1px solid lightcoral;
+            padding: 2px;
+            width: 50%;
+        }
+
+        fieldset:hover {
+            background-color: rgb(20, 40, 218);
+        }
+
+        label {
+            display: block;
+            width: 33%;
+        }
+
+        input {
+            display: block;
+            flex: 0 0 0.65;
+
+        }
+
+        input:focus {
+            border: 3px solid #e6b700;
+            background-color: azure;
+            outline: none;
+        }
+
+        div {
+            flex: 0 0 0.33;
+        }
+
+        span {
+            color: red;
+            font-size: 15pt;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <h1>Formulario de alta</h1>
+
+    <form name="registro" method="" action="" autocomplete enctype="multipart/form-data">
+        <fieldset>
+
+            <h2>Nombre y Apellidos <span>*</span></h2>
+
+            <input type="text" name="nombre" id="nombre" required>
+            <label for="nombre"> Nombre</label><br />
+
+            <input type="text" name="primerApellido" id="primerApellido" required>
+            <label for="primerApellido">Primer Apellido</label> <br />
+
+            <input type="text" name="SegundoApellido" id="SegundoApellido" required>
+            <label for="SegundoApellido">Segundo Apellido</label> <br />
+
+            <input type="submit" value="Log-in">
+
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

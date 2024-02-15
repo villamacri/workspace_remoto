@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(230, 222, 222);
+        }
+
+        form {
+            background-color: rgb(255, 255, 255);
+            border: 3px solid rgb(0, 0, 0);
+            padding: 2px;
+            width: 100%;
+
+        }
+
+        label {
+            display: block;
+            width: 33%;
+        }
+
+        input {
+            display: block;
+            flex: 0 0 0.65;
+
+        }
+
+        input:focus {
+            background-color: darksalmon;
+            color: darkred;
+            border: 3px solid black;
+        }
+
+        .izquierda-arriba{
+            float: left;
+            margin-top: 10px;
+
+        }
+
+        .derecha-arriba{
+            display: flex;
+            flex-direction: column;
+            padding-left: 300px;
+        }
+
+        .direccionVertical {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+
+        .direccionHor {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .derecha {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top: 10px;
+        }
+
+        fieldset {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        span {
+            color: red;
+            font-size: 15pt;
+        }
+
+        input[type=email] {
+            width: 180px;
+            height: 20px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="registro" method="" action="" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend>Formulario Alta</legend>
+            <div class="izquierda-arriba"> 
+                <div>
+                    <label for="NombreyAp"><strong>NombreyApellidos</strong><span>*</span></label>
+                </div>
+                <br>
+                <div>
+                    <input type="text" name="nombre" id="nombre" required>
+                    <label for="nombre">Nombre</label><br />
+
+                    <input type="text" name="PrimerApellido" id="PrimerApellido" required>
+                    <label for="apellido">Apellido</label><br/>
+
+                    <input type="text" name="segundoApellido" id="segundoApellido">
+                    <label for="segundoapellido">Segundo apellido</label><br />
+                </div>
+            </div>  
+        
+
+        <div class="derecha-arriba">
+            <div>
+                <label for="Direccion"><strong>Direccion</strong><span>*</span></label>
+            </div>
+            <br>
+            <div>
+                <input type="text" name="Calle" id="Calle" required>
+                <label for="Calle">Calle</label><br />
+
+                <div class="direccionHor">
+                    <div class="direccionVertical">
+                        <input type="number" min="0" max="52999">
+                        <label for="codigopostal">Código Postal</label><br />
+                    </div>
+
+                    <div class="direccionVertical">
+                        <input type="text" name="Municipio" id="Municipio" required>
+                        <label for="Municipio">Municipio</label><br />
+                    </div>
+                </div>
+
+
+                <select name="prov" id="prov" size="1">
+                    <option value="SE" selected>Sevilla</option>
+                    <option value="CO">Córdoba</option>
+                    <option value="HU">Huelva</option>
+                    <option value="GR">Granada</option>
+                    <option value="JA">Jaén</option>
+                    <option value="CA">Cádiz</option>
+                    <option value="AL">Almería</option>
+                    <option value="MA">Málaga</option>
+                </select>
+                <label for="prov">Provincia</label><br />
+
+
+                <select name="pais" id="pais" size="1">
+                    <option value="esp" selected>España</option>
+                    <option value="and">Andorra</option>
+                    <option value="Po">Portugal</option>
+
+                </select>
+                <label for="prov">País</label>
+
+            </div>
+
+        </div>
+
+        </fieldset>
+
+        
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" required name="email">
+            </div>
+
+            
+
+
+
+            <div>
+                <label for="Telefono">Teléfono<span>*</span></label>
+            </div>
+
+            <div class="direccionHor">
+
+                <div class="direccionVertical">
+                    <input type="text" name="Fijo" id="Fijo" size="9">
+                    <label for="Fijo">Fijo</label><br />
+                </div>
+
+                <div class="direccionVertical">
+                    <input type="text" name="Móvil" id="Móvil" size="9">
+                    <label for="Móvil">Móvil</label><br /><br />
+                </div>
+            </div>
+
+
+        </fieldset>
+        </div>
+
+        <div class="derecha">
+            <input type="submit" value="Darme de alta->">
+        </div>
+
+        </fieldset>
+    </form>
+</body>
+
+</html>
