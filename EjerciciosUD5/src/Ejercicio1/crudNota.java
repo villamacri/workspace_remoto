@@ -51,4 +51,20 @@ public class crudNota {
 		}
 	}
 	
+	public int calcularTamanhoLista() {
+		return lista.size();
+	}
+	
+	public void borrarNota(int indice) {
+		int uno=1;
+		
+		if(!lista.isEmpty()) {
+			lista.remove(indice-uno);
+		}
+	}
+	
+	public void modificarTitulo(String titulo) {
+		
+	}
+	
 }
