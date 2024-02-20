@@ -4,21 +4,16 @@ import java.util.Objects;
 
 public class Contacto {
 	
-	private String tfno, nombre;
+	private String nombre;
 
-	public Contacto(String tfno, String nombre) {
+	public Contacto(String nombre) {
 		super();
-		this.tfno = tfno;
 		this.nombre = nombre;
 	}
 
-	public String getTfno() {
-		return tfno;
-	}
 
-	public void setTfno(String tfno) {
-		this.tfno = tfno;
-	}
+
+
 
 	public String getNombre() {
 		return nombre;
@@ -30,13 +25,10 @@ public class Contacto {
 
 	@Override
 	public String toString() {
-		return "Contacto [tfno=" + tfno + ", nombre=" + nombre + "]";
+		return "Contacto [nombre=" + nombre + "]";
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(nombre, tfno);
-	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -47,7 +39,7 @@ public class Contacto {
 		if (getClass() != obj.getClass())
 			return false;
 		Contacto other = (Contacto) obj;
-		return Objects.equals(nombre, other.nombre) && Objects.equals(tfno, other.tfno);
+		return Objects.equals(nombre, other.nombre);
 	}
 	
 	

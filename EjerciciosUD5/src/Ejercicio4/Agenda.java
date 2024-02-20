@@ -1,22 +1,24 @@
 package Ejercicio4;
 
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public class Agenda {
 	
-	private Map<String,Contacto> listaContactos;
+	private Map<Contacto, String> listaContactos;
 	
-	public Agenda(Map<String, Contacto> listaContactos) {
+	public Agenda(Map<Contacto, String> listaContactos) {
 		super();
 		this.listaContactos = listaContactos;
 	}
 	
-	public Map<String, Contacto> getListaContactos() {
+	public Map<Contacto, String> getListaContactos() {
 		return listaContactos;
 	}
 
 
-	public void setListaContactos(Map<String, Contacto> listaContactos) {
+	public void setListaContactos(Map<Contacto, String> listaContactos) {
 		this.listaContactos = listaContactos;
 	}
 	
@@ -26,32 +28,36 @@ public class Agenda {
 	}
 
 
-	public void mostrarContactos(Contacto c) {
-		System.out.println(listaContactos);
+	public void mostrarContactos() {
+		Set<Entry<Contacto, String>> mostrar=listaContactos.entrySet();
+		for (Entry<Contacto, String> entry : mostrar) {
+			System.out.println(entry);
+		}
 	}
 	
-	public Contacto findByTelefnono (String telefono) {
+	public Entry<Contacto, String> findByNombre(String nombre) {
 		
-		boolean encontrado=false;
-		int i=0;
-		Contacto deLista = null;
+		Set<Entry<Contacto, String>> buscar=listaContactos.entrySet();
 		
-		while(i<listaContactos.size() && !encontrado) {
-			if(listaContactos.get(telefono).getTfno().equalsIgnoreCase(telefono)) {
-				deLista = listaContactos.get(telefono);
-				encontrado=true;
-			}else {
-				i++;
+		for (Entry<Contacto, String> entry : buscar) {
+			if(entry.getKey().getNombre().equalsIgnoreCase(nombre)) {
+				return entry;
 			}
 		}
+		return null;
 		
-		if (encontrado) {
-			return deLista;
-		}else {
-			return null;
-		}
-		
-		
+	}
+	
+	public void agregarContacto(Contacto c, String numTelefono) {
+		listaContactos.put(c, numTelefono);
+	}
+	
+	public void borrarContacto(Entry<Contacto, String> menosUno) {
+		listaContactos.entrySet().remove(menosUno);
+	}
+	
+	public void modificarNombre(Entry<Contacto, String> nombreCambiao, String nombre) {
+		nombreCambiao.getKey().setNombre(nombre);
 	}
 
 }
