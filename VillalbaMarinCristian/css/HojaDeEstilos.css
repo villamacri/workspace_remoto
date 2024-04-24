@@ -11,6 +11,18 @@
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
   }
+
+.sidebar>#main{
+    padding-top: left;
+    width: 25%;
+  }
+
+  
+
+  #logoNav{
+    width: 25%;
+    padding-top: left;
+  }
   
   /* The sidebar links */
   .sidebar a {
