@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Red Social</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav ul li {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+        }
+
+        #contenido-principal {
+            flex: 3;
+            padding-right: 20px;
+        }
+
+        aside {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <img src="logo.png" alt="Logo de la red social">
+        <h1>Mi Red Social</h1>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="perfil.html">Mi Perfil</a></li>
+            <li><a href="linea-del-tiempo.html">Línea del Tiempo</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+            <li><a href="amigos.html">Amigos</a></li>
+            <li><a href="configuracion.html">Configuración</a></li>
+        </ul>
+    </nav>
+
+    <!-- Zona principal -->
+    <main>
+        <!-- Zona de contenidos -->
+        <section id="contenido-principal">
+            <h2>Bienvenido a Mi Red Social</h2>
+            <p>Selecciona una opción del menú para empezar.</p>
+        </section>
+
+        <!-- Columna derecha -->
+        <aside>
+            <h2>Contenido relacionado</h2>
+            <p>Publicidad y otros contenidos aquí.</p>
+        </aside>
+    </main>
+
+    <!-- Pie de página (opcional) -->
+    <footer>
+        <p>Derechos de autor © 2024 Mi Red Social</p>
+    </footer>
+</body>
+</html>
