@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linea del tiempo</title>
+    <link rel="stylesheet" type="text/css" href="/css/estilos.css">
+    <style>
+    .carrusel{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        margin: 0 auto;
+        justify-content: center;
+        
+    }
+    .contennt{
+        width: 100%;
+    }
+    .carrusel aside{
+        display: flex;
+        flex: 1 1 10%;
+        padding: 2%;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .izda{
+        display: flex;
+        padding-left: 400px;
+    }
+    .dcha{
+        display: flex;
+        padding-right: 400px;
+    }
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <img src="logo.png" alt="Logo de la red social">
+        <h1>My Dumb Space</h1>
+    </header>
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="Mi perfil.html">Mi Perfil</a></li>
+            <li><a href="linea-del-tiempo.html">Línea del Tiempo</a></li>
+            <li><a href="fotos1.html">Fotos</a></li>
+            <li><a href="amigos.html">Amigos</a></li>
+            <li><a href="configuracion.html">Configuración</a></li>
+        </ul>
+    </nav>
+    <div class="contennt">
+        <main>
+            <div class="carrusel">
+                <aside><a href="fotos1.html"><img class="izda" src="/blog/iconos/izquierda.png" alt="izda" width="60px"></a></aside>
+                <div class="content"><img src="/blog/img/foto2.jpg" alt="foto1"></div>
+                <aside><a href="fotos3.html"><img class="dcha" src="/blog/iconos/derecha.png" alt="lego2" width="60px"></a></aside>
+            </div>
+        </main>
+    </div>
+</body>
